@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="f10ca038-6129-4f41-b003-819b75422047" name="home" url="http://ftp.hostbuying.com">
-        <fileTransfer host="ftp.diptanuchakraborty.in" port="21">
+      <webServer id="f10ca038-6129-4f41-b003-819b75422047" name="home" url="https://ftp.diptanuchakraborty.in">
+        <fileTransfer host="diptanuchakraborty.in" port="21" accessType="FTPS">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions compatibilityMode="true" dataProtectionLevel="Private" shareSSLContext="true" showHiddenFiles="true" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>
