@@ -15,7 +15,7 @@ require "mail/phpmailer/PHPMailerAutoload.php";
 $mail=new PHPMailer;
 $mail->isSMTP();
 $mail->Host="mail.diptanuchakraborty.in";
-$mail->Port=465;
+$mail->Port=587;
 $mail->SMTPAuth=true;
 $mail->SMTPSecure='tls';
 $mail->Username="administrator@diptanuchakraborty.in";
