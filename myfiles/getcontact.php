@@ -6,7 +6,7 @@ $msg = $_POST['InputMessage'];
 // Multiple recipients
 $to = 'chakrabortyd943@gmail.com'; // note the comma
 $sender_subject = 'Thank you for contacting';
-$my_subject = 'Some-one messeged you';
+$my_subject = 'Some-one messaged you';
 // Subject
 $a="hi";
 // Message
@@ -559,7 +559,7 @@ $message2='
 </tbody>
 </table>
 <div align="center" class="img-container center autowidth" style="padding-right: 5px;padding-left: 0px;">
-<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 5px;padding-left: 0px;" align="center"><![endif]--><img align="center" alt="Alternate text" border="0" class="center autowidth" src="images/first_imag.png" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 355px; display: block;" title="Alternate text" width="355"/>
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 5px;padding-left: 0px;" align="center"><![endif]--><img align="center" alt="Alternate text" border="0" class="center autowidth" src="./images/first_imag.png" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 355px; display: block;" title="Alternate text" width="355"/>
 <!--[if mso]></td></tr></table><![endif]-->
 </div>
 <table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
@@ -687,7 +687,7 @@ $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Additional headers
 $headers2[] = "To: $email";
-$headers2[] = 'From: chakrabortyd943@gmail.com';
+$headers2[] = 'From: Diptanuchakraborty.in';
 $to2 = "$email"; // note the comma
 // Mail it
 if(mail($to, $my_subject, $message, implode("\r\n", $headers))){
