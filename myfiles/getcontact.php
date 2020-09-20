@@ -681,14 +681,14 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Additional headers
 $headers[] = 'To: chakrabortyd943@gmail.com';
-$headers[] = 'From: chakrabortyd943@gmail.com';
+$headers[] = 'From: contact<Diptanuchakraborty.in>';
 $headers2[] = 'MIME-Version: 1.0';
 $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Additional headers
 $headers2[] = "To: $email";
 $headers2[] = 'From: Diptanuchakraborty.in';
-$headers2[]='Reply-To: chakabortyd943@gmail.com';
+$headers2[]='Reply-To: chakrabortyd943@gmail.com';
 $to2 = "$email"; // note the comma
 // Mail it
 if(mail($to, $my_subject, $message, implode("\r\n", $headers))){
