@@ -10,7 +10,7 @@ $to = 'chakrabortyd943@gmail.com'; // note the comma
 $sender_subject = 'Thank you for contacting';
 $my_subject = 'Some-one messeged you';
 $a="hi";
-$mailhost="mail.diptanuchakraborty.in" ;
+$mailhost="usa.server-host.co" ;
 $mailusername= "administrator@diptanuchakraborty.in";
 $mailpass="9774963614Dc";
 // Message
@@ -19,7 +19,7 @@ $mail=new PHPMailer;
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;  
 $mail->isSMTP();
 $mail->Host="$mailhost";
-$mail->Port=587;
+$mail->Port=465;
 $mail->SMTPAuth=true;
 $mail->SMTPSecure='tls';
 $mail->Username="$mailusername";
