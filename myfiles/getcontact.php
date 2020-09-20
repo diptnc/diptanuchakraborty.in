@@ -19,7 +19,7 @@ $mail=new PHPMailer;
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;  
 $mail->isSMTP();
 $mail->Host="$mailhost";
-$mail->Port=587;
+$mail->Port=567;
 $mail->SMTPAuth=true;
 $mail->SMTPSecure='tls';
 $mail->Username="$mailusername";
