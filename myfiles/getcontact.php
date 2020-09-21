@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 $name=$_POST["InputName"];
 $email=$_POST["InputEmail"];
 $sub=$_POST['InputSubject'];
