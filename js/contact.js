@@ -10,7 +10,7 @@ $(function () {
         
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
-            var url = "./form/contact.php";
+            var url = "https://diptanuchakrborty.in/form/contact.php";
             alert("formsubmired");
             // POST values in the background the the script URL
 
