@@ -1,17 +1,36 @@
 <?php
-header("Access-Control-Allow-Origin: *");
 $name=$_POST["InputName"];
 $email=$_POST["InputEmail"];
 $sub=$_POST['InputSubject'];
 $msg = $_POST['InputMessage'];
 // Multiple recipients
 $to = 'chakrabortyd943@gmail.com'; // note the comma
+
+// Subject
 $sender_subject = 'Thank you for contacting';
 $my_subject = 'Some-one messaged you';
-// Subject
-$a="hi";
+$mailhost="mail.globaltadka.in" ;
+$mailusername= "diptanuchakraborty@globaltadka.in";
+$mailpass="9774963614Dc";
 // Message
-$message = '
+require_once "./phpmailer/PHPMailerAutoload.php";
+$mail=new PHPMailer; 
+$mail->isSMTP();
+$mail->Host="$mailhost";
+$mail->Port=587;
+$mail->SMTPAuth=true;
+$mail->SMTPSecure='tls';
+$mail->Username="$mailusername";
+$mail->Password="$mailpass";
+$mail->setFrom('diptanuchakraborty@globaltadka.in','Diptanu chakraborty');
+$mail->addAddress("$to");
+$mail->addReplyTo("$email");
+$mail->isHTML(true);
+$mail->Subject="$my_subject";
+$mail->Body=
+
+
+'
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -257,11 +276,43 @@ $message = '
 </body>
 </html>
 
-'; 
+'
+;
+
+
+//sender email reciept
+
+// function end
 
 
 
-$message2='
+if(!($mail->Send() )){
+	echo "not sent";
+
+}else{
+
+
+
+	// sencond mailin to the sender
+
+
+	require_once "./phpmailer/PHPMailerAutoload.php";
+	$mail2=new PHPMailer;
+	$mail2->isSMTP();
+	$mail2->Host="$mailhost";
+	$mail2->Port=587;
+	$mail2->SMTPAuth=true;
+	$mail2->SMTPSecure='tls';
+	$mail2->Username="$mailusername";
+	$mail2->Password="$mailpass";
+	$mail2->setFrom('diptanuchakraborty@globaltadka.in','Diptanu chakraborty');
+	$mail2->addAddress("$email");
+	$mail2->addReplyTo("$to");
+	$mail2->isHTML(true);
+	$mail2->Subject="$sender_subject";
+	
+	$mail2->Body=
+'
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -560,7 +611,7 @@ $message2='
 </tbody>
 </table>
 <div align="center" class="img-container center autowidth" style="padding-right: 5px;padding-left: 0px;">
-<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 5px;padding-left: 0px;" align="center"><![endif]--><img align="center" alt="Alternate text" border="0" class="center autowidth" src="http://diptanuchakraborty.in/myfiles/images/first_imag.png" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 355px; display: block;" title="Alternate text" width="355"/>
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 5px;padding-left: 0px;" align="center"><![endif]--><img align="center" alt="Alternate text" border="0" class="center autowidth" src="https://diptanuchakraborty.in/myfiles/images/first_imag.png" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-width: 355px; display: block;" title="Alternate text" width="355"/>
 <!--[if mso]></td></tr></table><![endif]-->
 </div>
 <table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
@@ -669,33 +720,24 @@ $message2='
 <!--[if (IE)]></div><![endif]-->
 </body>
 </html>
+
 '
 ;
 
 
 
-
-
-// To send HTML mail, the Content-type header must be set
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-// Additional headers
-$headers[] = 'To: chakrabortyd943@gmail.com';
-$headers[] = 'From: contact<Diptanuchakraborty.in>';
-$headers2[] = 'MIME-Version: 1.0';
-$headers2[] = 'Content-type: text/html; charset=iso-8859-1';
-
-// Additional headers
-$headers2[] = "To: $email";
-$headers2[] = 'From: Diptanuchakraborty.in';
-$headers2[]='Reply-To: chakrabortyd943@gmail.com';
-$to2 = "$email"; // note the comma
-// Mail it
-if(mail($to, $my_subject, $message, implode("\r\n", $headers))){
-    if(mail($to2, $sender_subject, $message2, implode("\r\n", $headers2))){
- 		echo "sent";
-		return 1;   
-	}
+if(!($mail2->Send())){
+	echo "notsent2";
+	
+}else{
+	echo "sent";
+	return 1; 
 }
+
+
+
+
+}
+
+
 ?>
