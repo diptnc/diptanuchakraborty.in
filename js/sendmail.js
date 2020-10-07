@@ -35,7 +35,7 @@ $(function () {
             
             document.getElementById("submit").disabled=true;
         //   var url="https://quickosolution.000webhostapp.com/form/getcontact.php";
-          var url="./myfiles/getcontact.php";
+          var url="https://diptanuchakraborty.globaltadka.in/myfiles/getcontact-v.php";
             $.ajax({
                     type: "POST",
                     url: url,
