@@ -4,6 +4,7 @@ $name=$_POST["InputName"];
 $email=$_POST["InputEmail"];
 $sub=$_POST['InputSubject'];
 $msg = $_POST['InputMessage'];
+$phone=$_POST['InputPhone'];
 // Multiple recipients
 $to = 'chakrabortyd943@gmail.com'; // note the comma
 $sender_subject = 'Thank you for contacting';
@@ -213,7 +214,7 @@ $message = '
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
 <div style="color:#555555;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 <div style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-<p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;"><strong>Phone:</strong>null</p>
+<p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;"><strong>Phone:</strong>'.$phone.'</p>
 </div>
 </div>
 <!--[if mso]></td></tr></table><![endif]-->
