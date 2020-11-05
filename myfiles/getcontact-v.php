@@ -687,7 +687,7 @@ $headers[] = 'From: Diptanuchakraborty.in';
 $headers2[] = 'MIME-Version: 1.0';
 $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
 
-// Additional headers
+// Additional headers bc
 $headers2[] = "To: $email";
 $headers2[] = 'From: Diptanuchakraborty.in';
 $headers2[]='Reply-To: chakrabortyd943@gmail.com';
