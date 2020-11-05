@@ -6,7 +6,7 @@ $sub=$_POST['InputSubject'];
 $msg = $_POST['InputMessage'];
 $phone=$_POST['InputPhone'];
 // Multiple recipients
-$to = 'chakrabortyd943@gmail.com'; // note the comma
+
 $sender_subject = 'Thank you for contacting';
 $my_subject = 'Some-one messaged you';
 // Subject
@@ -681,15 +681,15 @@ $message2='
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 $headers[]="Reply-To: $email";
-// Additional headers
-// $headers[] = 'To: chakrabortyd943@gmail.com';
-$headers[] = 'From: Diptanuchakraborty.in';
+$headers[] = 'To: chakrabortyd943@gmail.com';
+$headers[] = 'From: admin@Diptanuchakraborty.in';
+
+$to = 'chakrabortyd943@gmail.com'; 
+
 $headers2[] = 'MIME-Version: 1.0';
 $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
-
-// Additional headers bc
 $headers2[] = "To: $email";
-$headers2[] = 'From: Diptanuchakraborty.in';
+$headers2[] = 'From: admin@Diptanuchakraborty.in';
 $headers2[]='Reply-To: chakrabortyd943@gmail.com';
 $to2 = "$email"; // note the comma
 // Mail it
