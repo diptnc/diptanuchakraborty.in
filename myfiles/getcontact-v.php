@@ -682,14 +682,14 @@ $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 $headers[]="Reply-To: $email";
 $headers[] = 'To: chakrabortyd943@gmail.com';
-$headers[] = 'From: Diptanu@Diptanuchakraborty.in';
+$headers[] = 'From: Diptanu chakraborty <admin@diptanuchakraborty.in>';
 
 $to = 'chakrabortyd943@gmail.com'; 
 
 $headers2[] = 'MIME-Version: 1.0';
 $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
 $headers2[] = "To: $email";
-$headers2[] = 'From: Diptanu@Diptanuchakraborty.in';
+$headers2[] = 'From: Diptanu chakraborty <admin@diptanuchakraborty.in>';
 $headers2[]='Reply-To: chakrabortyd943@gmail.com';
 $to2 = "$email"; // note the comma
 // Mail it
